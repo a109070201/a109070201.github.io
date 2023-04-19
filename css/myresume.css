@@ -23,14 +23,14 @@ h1, h2, h3, h4 ,h5 ,h6 , .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .bg-primary{
-	background-color:#961fc1!important;
+	background-color:#0f999e!important;
 	background-image: url(../assets/img/green-gobbler.png);
 }
 
 .text-primary{
-	color: 	#961fc1!important;
+	color: 	#238dd4!important;
 }
 
 a{
-	color: 	#961fc1;
+	color: 	#238dd4;
 }
