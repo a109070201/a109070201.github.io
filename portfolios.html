@@ -1,6 +1,5 @@
-<!-- Page Content-->          
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -8,94 +7,193 @@
     <title>作品集網站</title>
     <!-- 引入 Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         .custom-img {
+            max-height: 200px;
             max-width: 200px;
-            max-height: 300px;
+        }
+
+        .caption {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .caption p {
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a.nav-link[href='#logo-section']").on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#logo-section").offset().top
+                }, 800);
+            });
+
+            $("a.nav-link[href='#model-section']").on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#model-section").offset().top
+                }, 800);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">馬聖烜的作品集</a>
+        <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> 馬聖烜的作品集</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ml-auto"> 
-                <a class="nav-link" href="#">首頁</a>
-                <a class="nav-link" href="#">作品1</a>
-                <a class="nav-link" href="#">作品2</a>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="#logo-section">模型設計</a>
+                <a class="nav-link" href="#model-section">LOGO設計</a>
+                <a class="nav-link" href="#model-section">創意設計</a>
             </div>
         </div>
     </nav>
 
     <h2 class="text-center" style="text-decoration: underline; font-weight: bold; margin-top: 15px;">作品總覽</h2>
-    <article class="col-lg-4 col-md-6 mb-30 clearfix wow fadeInUp" data-wow-duration="500ms">
-    <div class="post-block">
-      <div class="media-wrapper">
-        <img src="https://puttu.com/wp-content/uploads/2014/08/300x200.gif" alt=" " class="w-100">
-      </div>
-      <div class="content">
-        <h3><a href="index.html"> </a></h3>
-          <p>電話: <a href="tel:+886-2-26657806"> </a><br>地址: <a href="https://www.google.com/maps/dir//%E5%A4%A9%E8%96%8C%E8%8C%B6%E8%A1%8C/data=!4m8!4m7!1m0!1m5!1m1!1s0x3467ff302664ec2f:0xd1e083ae1a0b53aa!2m2!1d121.7078124!2d24.934517099999997">  </a> </p>
-          <a class="btn btn-transparent" href="">Read more</a>
 
-      </div>
-    </div>
-  </article>
     <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-md-4 text-center"> <!-- 使用 text-center 類別 -->
+            <div id="model-section" class="col-md-4 text-center">
+                <h2>防疫大使貓</h2>
+                <p>模型設計</p>
+                <a href="cat.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\喵.jpg" alt="作品圖片 1" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="model-section" class="col-md-4 text-center">
+                <h2>保持社交距離貓</h2>
+                <p>模型設計</p>
+                <a href="cat2.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\保持社交距離貓.jpg" alt="作品圖片 2" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="model-section" class="col-md-4 text-center">
+                <h2>疫情指揮貓</h2>
+                <p>模型設計</p>
+                <a href="cat3.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\防疫貓.jpg" alt="作品圖片 3" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
                 <h2>橘子</h2>
                 <p>Logo設計</p>
-                <img src="assets\img\小橘.png" alt="作品圖片 1" class="img-fluid custom-img">
+                <a href="introduce.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\小橘.png" alt="作品圖片 4" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h2>馬</h2>
+                <p>Logo設計</p>
+                <a href="horse.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\馬馬.png" alt="作品圖片 5" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h2>大眾傳播社</h2>
+                <p>Logo設計</p>
+                <a href="media.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\dooog.png" alt="作品圖片 6" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4 text-center">
-                <h2>馬Logo</h2>
-                <p>Logo設計</p>
-                <img src="assets\img\馬馬.png" alt="作品圖片 2" class="img-fluid custom-img">
+                <h2>兔子彩繪</h2>
+                <p>創意設計</p>
+                <a href="rabbit.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\rabbit.png" alt="作品圖片 7" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4 text-center">
-                <h2>流浪狗</h2>
-                <p>Logo設計</p>
-                <img src="assets\img\doog.png" alt="作品圖片 3" class="img-fluid custom-img">
+                <h2>太陽彩繪</h2>
+                <p>創意設計</p>
+                <a href="sun.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\sun.png" alt="作品圖片 8" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <h2>滑雪</h2>
+                <p>創意設計</p>
+                <a href="snow.html" target="_blank">
+                    <div class="custom-frame">
+                        <div class="img-container">
+                            <img src="assets\img\snow.png" alt="作品圖片 9" class="img-fluid custom-img">
+                        </div>
+                        <div class="caption">
+                            <p>作品介紹</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <h2>防疫大使貓</h2>
-                <p>作業設計</p>
-                <img src="assets\img\喵.jpg" alt="作品圖片 4" class="img-fluid custom-img">
-            </div>
-            <div class="col-md-4 text-center">
-                <h2>保持社交距離貓</h2>
-                <p>作業設計</p>
-                <img src="assets\img\保持社交距離貓.jpg" alt="作品圖片 5" class="img-fluid custom-img">
-            </div>
-            <div class="col-md-4 text-center">
-                <h2>疫情指揮貓</h2>
-                <p>作業設計</p>
-                <img src="assets\img\防疫貓.jpg" alt="作品圖片 6" class="img-fluid custom-img">
-            </div>
-            <!-- 其他作品區塊 -->
-        </div>
-        <article class="col-lg-4 col-md-6 mb-30 clearfix wow fadeInUp" data-wow-duration="500ms">
-            <div class="post-block">
-              <div class=">疫情指揮貓">
-                <a href="https://www.google.com/maps/dir//%E5%A4%A9%E8%96%8C%E8%8C%B6%E8%A1%8C/data=!4m8!4m7!1m0!1m5!1m1!1s0x3467ff302664ec2f:0xd1e083ae1a0b53aa!2m2!1d121.7078124!2d24.934517099999997"><img src="https://www.google.com/maps/dir//%E5%A4%A9%E8%96%8C%E8%8C%B6%E8%A1%8C/data=!4m8!4m7!1m0!1m5!1m1!1s0x3467ff302664ec2f:0xd1e083ae1a0b53aa!2m2!1d121.7078124!2d24.934517099999997" > </a> </p>
-              </div>
-              <div class="content">
-                <h3><a href="index.html"> </a></h3>
-                  <p>電話: <a href="tel:+886-2-26657806"> </a><br>地址: <a href="https://www.google.com/maps/dir//%E5%A4%A9%E8%96%8C%E8%8C%B6%E8%A1%8C/data=!4m8!4m7!1m0!1m5!1m1!1s0x3467ff302664ec2f:0xd1e083ae1a0b53aa!2m2!1d121.7078124!2d24.934517099999997"><img src="https://www.google.com/maps/dir//%E5%A4%A9%E8%96%8C%E8%8C%B6%E8%A1%8C/data=!4m8!4m7!1m0!1m5!1m1!1s0x3467ff302664ec2f:0xd1e083ae1a0b53aa!2m2!1d121.7078124!2d24.934517099999997" > </a> </p>
-                  <a class="btn btn-transparent" href="">Read more</a>
-        
-              </div>
-            </div>
-          </article>
     </div>
 
     <!-- 引入 Bootstrap JS -->
